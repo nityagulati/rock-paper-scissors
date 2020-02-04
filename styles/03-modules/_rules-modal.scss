@@ -1,0 +1,39 @@
+.rules-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $overlay-color;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        padding: 2%;
+        background-color: $color-white;
+        text-align: center;
+        transform: translate(-50%, -50%);
+ 
+        &--close {
+            float: right;
+        }
+
+        &--img {
+            display: block;
+            margin: auto;
+            margin-top: 10%;
+        }
+    }
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

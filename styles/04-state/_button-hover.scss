@@ -1,0 +1,42 @@
+@mixin play-again-hover() {
+    box-shadow: 0 1px 3px $color-white;
+    font-weight: $font-weight-bolder;
+    color: $play-again-hover;
+    outline: none;
+}
+
+@mixin footer-btn-hover() {
+    background: lighten($outline-color, 50);
+    color: $primary-color;
+    border-color: $primary-color;
+    box-shadow: 0 0 8px $color-white;
+}
+
+// game buttons
+.btn-rock:hover,
+.btn-paper:hover,
+.btn-scissors:hover {
+    transform: scale(1.15);
+}
+
+// play again button
+.btn-play-again {
+    &:hover {
+        @include play-again-hover();
+    }
+    &:active {
+        @include play-again-hover();
+    }
+    &:focus {
+        @include play-again-hover();
+    }
+}
+
+// footer buttons
+.btn-rules:hover {
+    @include footer-btn-hover();
+}
+
+.btn-reset:hover {
+    @include footer-btn-hover();
+}

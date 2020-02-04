@@ -1,0 +1,25 @@
+@mixin grid-box-settings($element) {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    @if ($element=='result-wrapper') {
+        display: none;  // hide result screen on initial load
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 10% 40%;
+        gap: 2% 0;
+        grid-template-areas:
+            'playerSelection houseSelection'
+            'playerLabel houseLabel'
+            'resultBox resultBox';
+
+        @include for-size(tablet-landscape) {
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: 10% 90%;
+            gap: 0;
+            grid-template-areas:
+                'playerLabel resultBox houseLabel'
+                'playerSelection resultBox houseSelection';
+        }
+    }
+}

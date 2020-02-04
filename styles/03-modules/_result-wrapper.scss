@@ -1,0 +1,44 @@
+@mixin result-btn-settings() {
+    align-self: center;  // override 'align-self: end' if selection is Rock
+    transform: scale(1.4);
+    cursor: default;
+    outline: none;
+    pointer-events: none;
+}
+
+.result-wrapper {
+    @include content-wrapper(result-wrapper);
+    @include grid-box-settings(result-wrapper);
+}
+
+.result-label {
+    &--player {
+        grid-area: playerLabel;
+    }
+
+    &--house {
+        grid-area: houseLabel;
+    }
+}
+
+.result-box {
+    display: none;
+    grid-area: resultBox;
+    width: 100%;
+    max-width: 100%;
+}
+
+.game-result {
+    font-size: $font-size-large;
+}
+
+// game selection results
+.player-selection {
+    @include result-btn-settings();
+    grid-area: playerSelection;
+}
+
+.house-selection {
+    @include result-btn-settings();
+    grid-area: houseSelection;
+}

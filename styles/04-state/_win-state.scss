@@ -1,0 +1,18 @@
+// win state box shadow overlay
+.is-winner {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow:
+            0 0 0 20px rgba(255, 255, 255, 0.09),
+            0 0 0 40px rgba(255, 255, 255, 0.06),
+            0 0 0 60px rgba(255, 255, 255, 0.03);
+    }
+}
+    

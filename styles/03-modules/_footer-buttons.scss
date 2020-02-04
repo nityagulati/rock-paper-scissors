@@ -1,0 +1,26 @@
+@mixin footer-btn-settings() {
+    background: transparent;
+    border: 2px solid $rules-btn-outline;
+    border-radius: 8px;
+    color: $color-white;
+    font-size: $font-size-medium; 
+    padding: 2% 6%;
+    letter-spacing: 0.1rem;
+    outline: none;
+
+    @include for-size(desktop-laptop) {
+        font-size: $font-size-small;
+        padding: 0.6% 3%;
+    }
+}
+
+// reset button
+.btn-reset {
+    @include footer-btn-settings();
+    margin-right: 10%;
+}
+
+// rules button
+.btn-rules {
+    @include footer-btn-settings();
+}

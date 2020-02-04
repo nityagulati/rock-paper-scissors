@@ -1,0 +1,9 @@
+.game-wrapper {
+    @include content-wrapper(game-wrapper);
+    @include flex-settings(game-wrapper);
+    background: {
+        image: url('../images/bg-triangle.svg');
+        position: center;
+        repeat: no-repeat;
+    }
+}

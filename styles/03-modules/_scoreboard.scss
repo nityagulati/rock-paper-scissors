@@ -1,0 +1,30 @@
+.scoreboard {
+    @include flex-settings(scoreboard);
+    border: 2px solid $scoreboard-outline;
+    border-radius: 12px;
+    margin: 5%;
+    padding: 3%;
+
+    &__logo {
+        width: 50%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__box {
+        @include flex-settings(scoreboard__box);
+        background-color: $scorebox-bg-color;
+        border-radius: 8px;
+        padding: 2% 7%;
+    
+        &--label {
+            color: $score-label-color;
+        }
+    
+        &--score {
+            color: $score-number-color;
+            font-size: $font-size-xlarge;
+            font-weight: $font-weight-bolder;
+        }
+    }
+}

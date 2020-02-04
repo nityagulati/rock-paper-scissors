@@ -1,0 +1,41 @@
+@mixin content-wrapper($element) {
+    // game wrapper div
+    @if ($element == 'game-wrapper') {
+        height: 45vh;
+        margin: 15% 10%;
+
+        @include for-size(ipad-tablet) {
+            margin: 10%;
+        }
+        @include for-size(tablet-landscape) {
+            width: 50%;
+            margin: 5% auto;
+        }
+        @include for-size(desktop-laptop) {
+            height: 60vh;
+            width: 40%;
+            margin: 3% auto 1% auto;
+        }
+    }
+
+    // result wrapper div
+    @if ($element == 'result-wrapper') {
+        height: 60vh;
+        margin: 5% 0 10% 0;
+
+        @include for-size(ipad-tablet) {
+            height: 50vh;
+            width: 70%; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include for-size(tablet-landscape) {
+            height: 40vh;
+        }
+        @include for-size(desktop-laptop) {
+            width: 55%; 
+            height: 60vh;
+            margin: 3% auto 1% auto;
+        } 
+    }
+}

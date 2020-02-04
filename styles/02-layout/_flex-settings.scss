@@ -1,0 +1,14 @@
+@mixin flex-settings($element) {
+    display: flex;
+    justify-content: space-between;  
+
+    @if($element == 'site-footer') {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @if($element == 'scoreboard__box') {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

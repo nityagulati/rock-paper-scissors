@@ -1,0 +1,13 @@
+@mixin reset() {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, *, *:before, *:after {
+    @include reset();
+}
+
+button {
+    text-transform: uppercase;
+}

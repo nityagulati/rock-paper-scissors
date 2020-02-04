@@ -1,0 +1,29 @@
+// mobile-first development - responsive layouts - scaled up
+// base styles - phones only (min-width: 320px) and up
+// device breakpoints for media queries
+@mixin for-size($size) {
+    @if $size == xsmall-phone {
+        @media screen and (min-width: 320px) and (max-width: 360px){ @content; }
+    }
+    @if $size == iphone-x {
+        @media screen and (min-width: 375px) and (max-width: 375px) { @content; }
+    }
+    @if $size == large-phone {
+        @media screen and (min-width: 576px) { @content; }
+    }
+    @if $size == ipad-tablet {
+        @media screen and (min-width:768px) { @content; }
+    }
+    @if $size == tablet-landscape {
+        @media screen and (min-width: 992px) { @content; }
+    }
+    @if $size == ipad-pro {
+        @media screen and (min-width: 1024px) { @content; }
+    }
+    @if $size == desktop-laptop {
+        @media screen and (min-width: 1220px) { @content; }
+    } 
+    @if $size == large-desktop {
+        @media screen and (min-width: 1366px) { @content; }
+    }
+}

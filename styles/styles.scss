@@ -1,0 +1,28 @@
+// 01 - base imports
+@import "01-base/reset";
+@import "01-base/colors";
+@import "01-base/typography";
+@import "01-base/body";
+@import "01-base/media-breakpoints";
+
+// 02 - layout imports
+@import "02-layout/content-wrapper";
+@import "02-layout/flex-settings";
+@import "02-layout/grid-settings";
+@import "02-layout/footer-layout";
+
+// 03 - module imports
+@import "03-modules/attribution";
+@import "03-modules/footer-buttons";
+@import "03-modules/game-buttons";
+@import "03-modules/game-wrapper";
+@import "03-modules/result-wrapper";
+@import "03-modules/rules-modal";
+@import "03-modules/scoreboard";
+
+// 04 - state imports
+@import "04-state/button-hover";
+@import "04-state/loading-state";
+@import "04-state/win-state";
+@import "04-state/media-queries";
+

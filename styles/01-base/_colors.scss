@@ -1,0 +1,41 @@
+
+// basics
+$color-black: hsl(0, 0, 0);
+$color-white: hsl(100, 100, 100);
+$color-red: hsl(349, 71%, 52%);
+$primary-color: hsl(229, 64%, 46%);
+$outline-color:  hsl(217, 16%, 45%);
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+
+// background
+$bg-gradient-color1: hsl(214, 47%, 23%);
+$bg-gradient-color2: hsl(237, 49%, 15%); 
+$bg-gradient: radial-gradient(circle, $bg-gradient-color1 50%, $bg-gradient-color2);
+
+// game buttons
+$btn-default-bg: $color-white;
+$btn-shadow-inset: rgba(0, 0, 0, 0.2);
+$rock-btn-border: hsl(349, 71%, 52%);
+$rock-btn-shadow: hsla(349, 70%, 56%, 0.7);
+$paper-btn-border: hsl(230, 89%, 62%);
+$paper-btn-shadow: hsla(230, 89%, 65%, 0.7);
+$scissors-btn-border: hsl(39, 89%, 49%);
+$scissors-btn-shadow: hsla(40, 84%, 53%, 0.7);
+    // rules button
+$rules-btn-outline: $outline-color;
+    // play again button
+$play-again-color: $primary-color;
+$play-again-hover: $color-red;
+
+
+// scoreboard 
+$scoreboard-outline: $outline-color;
+$score-label-color: $primary-color;
+$score-number-color: hsl(229, 25%, 31%);
+$scorebox-bg-color: lighten($scoreboard-outline, 50);
+
+
+// footer links 
+$attribution-link-color: hsl(228, 45%, 74%);
+$attribution-link-hover: darken($attribution-link-color, 30);
