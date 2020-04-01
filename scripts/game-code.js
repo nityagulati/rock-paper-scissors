@@ -28,7 +28,8 @@ for (let elem of gameElements.gameButtons) {
 
 // get computer selection
 function computerPlay() {
-    houseSelection = gameElements.gameButtons[Math.floor(Math.random() * gameElements.gameButtons.length)].className;
+    let randomSelection = Math.floor(Math.random() * gameElements.gameButtons.length);
+    houseSelection = gameElements.gameButtons[randomSelection].className;
     return houseSelection;
 }
 
