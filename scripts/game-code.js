@@ -45,36 +45,36 @@ function playRound(event) {
 function getResult(playerSelection, houseSelection) {
     if (playerSelection === houseSelection) {
         result = undefined;
-        return result;
     } else if (playerSelection === 'btn-paper' && houseSelection === 'btn-rock') {
         result = true;
-        return result;
     } else if (playerSelection === 'btn-rock' && houseSelection === 'btn-scissors') {
         result = true;
-        return result;
     } else if (playerSelection === 'btn-scissors' && houseSelection === 'btn-paper') {
         result = true;
-        return result;
     } else {
         result = false;
-        return result;
     }
+    return result;
 }
 
 // print the result and increment score for win, decrement score for loss
 function printResult() {
-    if (result === undefined) {
-        gameElements.gameResult.textContent = 'It\'s a Draw';
-    } else if (result) {
-        gameElements.playerSelectionBtn.classList.add('is-winner');
-        gameElements.gameResult.textContent = 'You Win';
-        score++;
-        gameElements.gameScore.textContent = score;
-    } else if (!result) {
-        gameElements.gameResult.textContent = 'You Lose';
-        gameElements.houseSelectionBtn.classList.add('is-winner');
-        score--;
-        gameElements.gameScore.textContent = score;
+    switch(result) {
+        case undefined:
+            gameElements.gameResult.textContent = 'It\'s a Draw';
+            break;
+        case true:
+            gameElements.playerSelectionBtn.classList.add('is-winner');
+            gameElements.gameResult.textContent = 'You Win';
+            score++;
+            gameElements.gameScore.textContent = score;
+            break;
+        case false:
+            gameElements.gameResult.textContent = 'You Lose';
+            gameElements.houseSelectionBtn.classList.add('is-winner');
+            score--;
+            gameElements.gameScore.textContent = score;
+            break;
     }
     console.log(`result: ${gameElements.gameResult.textContent}`); // for testing and debugging
 
